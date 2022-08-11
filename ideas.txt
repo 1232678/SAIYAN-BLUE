@@ -1,0 +1,15 @@
+[] use clamp for font size
+[] choose better color
+[] smooth scroll go back to top
+[] change the nav bar(logo, home, Sponsor, aboutme, yt logo, discord logo)
+[] merch(comming soon)
+[] line height
+[] letter spacing
+[] 404 note found
+https://jamesclear.com/sponsor
+a:focus {
+outline: 2px solid var(--primaryh color);
+outline-offset: 5px;
+}
+[] use everything we've learned
+[] add sentence space to visit channel

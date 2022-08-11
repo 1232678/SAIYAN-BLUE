@@ -1,0 +1,310 @@
+/* ========== VARIABLES ========== */
+:root {
+  --ff: "Work Sans", sans-serif;
+
+  --fw-n: 300;
+  --fw-m: 600;
+  --fw-b: 900;
+
+  /* --fs-1: 5.5rem; */
+  --fs-1: clamp(3rem, 9vw, 5.5rem);
+  --fs-2: 2.8rem;
+  --fs-p: 1.8rem;
+
+  --f-clr: white;
+  --f-lh: 1.4;
+
+  --nav-color: #131372;
+  --background-color: #23244a;
+  --blue: #1464c0;
+  --accent-clr-1: #3ca7f8;
+  --accent-clr-2: #d6922c;
+}
+
+/* ========== RESET ========== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: var(--ff);
+}
+
+main {
+  background-color: var(--background-color);
+}
+/* ========== TYPOGRAPHY ========== */
+h1,
+h2,
+p,
+a,
+li {
+  color: var(--f-clr);
+}
+
+h1 {
+  font-size: var(--fs-1);
+  text-transform: uppercase;
+  font-weight: var(--fw-b);
+}
+
+h2 {
+  font-size: var(--fs-2);
+  font-weight: var(--fw-m);
+  text-transform: uppercase;
+}
+
+p {
+  line-height: var(--f-lh);
+}
+/* use clamp */
+a {
+  text-decoration: none;
+}
+
+li,
+p {
+  font-size: var(--fs-p);
+}
+ul {
+  list-style-type: none;
+}
+/* ========== REUSABLE COMPONENTS ========== */
+.outline {
+  outline: 1px solid lime;
+}
+.outline-r {
+  outline: 1px solid red;
+}
+.container {
+  width: min(80%, 1200px);
+  margin: 0 auto;
+}
+
+/* ========== NAVIGATION ========== */
+.big-nav {
+  padding: 1.5em 0;
+  background-color: var(--background-color);
+  /* text-align: center; */
+  /* position: fixed;
+  width: 100vw; */
+}
+.big-nav__container {
+  width: min(80%, 1100px);
+  margin: 0 auto;
+  position: relative;
+  height: auto;
+}
+
+.navalign {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo__text {
+  display: inline;
+  font-size: var(--fs-2);
+}
+
+.logo__img {
+  width: 54px;
+}
+
+.nav {
+  display: none;
+}
+
+.nav--visible {
+  display: block;
+  width: 100%;
+}
+
+.nav-toggle {
+  cursor: pointer;
+  border: 0;
+  width: 4.8rem;
+  height: 4.8rem;
+  padding: 0;
+  border-radius: 50%;
+  color: white;
+  background-color: var(--background-color);
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: opacity 250ms ease;
+}
+
+.nav-toggle:hover {
+  opacity: 0.7;
+}
+
+.nav-toggle > i {
+  font-size: var(--fs-2);
+}
+
+.nav__list--primary .nav__item {
+  margin-top: 0.75em;
+  text-align: center;
+}
+
+.nav__list--secondary {
+  height: 4.8rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav__list--secondary .nav__item {
+  margin-right: 0.2em;
+}
+
+.nav__link--yt:hover {
+  color: red;
+}
+
+.nav__link--discord:hover {
+  color: #5865f2;
+}
+
+/* ========== HERO ========== */
+.hero {
+  padding: 2em 0 6em 0;
+}
+.ssjdesk {
+  display: none;
+  width: 40%;
+}
+
+.ssjmob {
+  width: 60%;
+}
+.hero_text {
+  text-align: center;
+}
+.hero_title {
+  font-size: var(--fs-1);
+}
+.hero_text > p {
+  font-size: var(--fs-p);
+  text-align: justify;
+  margin-bottom: 1.2em;
+}
+
+.hero_btn {
+  display: inline-block;
+  border: none;
+  background-color: var(--accent-clr-1);
+  padding: 0.4em 0.9em;
+  font-size: var(--fs-p);
+  border-radius: 15px;
+  text-transform: uppercase;
+  font-weight: var(--fw-b);
+}
+
+/* ==========TOP VIDEOS========= */
+.videoshead {
+  background-color: var(--blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.videoshead > h1 {
+  margin: auto;
+}
+
+video {
+  width: 90%;
+  border-radius: 15px;
+}
+.videos p {
+  font-weight: var(--fw-b);
+}
+@media (min-width: 800px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .navalign {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .nav__list--secondary {
+    position: static;
+  }
+
+  .nav {
+    display: inline-block;
+    width: min(40%, 50rem);
+  }
+
+  .nav__list--primary {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav__list--primary .nav__item {
+    display: inline;
+    margin: 0;
+  }
+
+  .nav__list--secondary .nav__item {
+    margin-left: 0.4em;
+  }
+
+  /* ==== hero ==== */
+  .ssjdesk {
+    display: inline-block;
+    width: min(40%, 400px);
+  }
+
+  .ssjmob {
+    display: none;
+  }
+
+  .hero_ctn {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .hero_text {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .hero_title {
+    text-align: left;
+  }
+  .hero_btn:hover {
+    outline: 2px solid blue;
+  }
+}
