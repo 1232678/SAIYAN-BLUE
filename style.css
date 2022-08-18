@@ -7,15 +7,19 @@
   --fw-b: 900;
 
   --fs-1: clamp(5rem, 5vw, 8rem);
-  --fs-2: 2.8rem;
-  --fs-p: 1.8rem;
+  /* --fs-2: 2.8rem; */
+  --fs-2: clamp(2.1rem, 5vw, 3.5rem);
+  --fs-3: clamp(1.6rem, 5vw, 1.8rem);
+  --fs-p: 1.6rem;
 
   --f-clr: white;
   --f-lh: 1.4;
 
   --nav-color: #131372;
   --background-color: #23244a;
+  --scroll-bar: #2f33a6;
   --blue: #1464c0;
+  --light-blue: #2c70d6;
   --accent-clr-1: #3ca7f8;
   --accent-clr-2: #d6922c;
 }
@@ -35,6 +39,7 @@
 
 html {
   font-size: 62.5%;
+  /* height: 100%; */
 }
 
 img {
@@ -43,17 +48,43 @@ img {
 
 body {
   font-family: var(--ff);
+  /* min-height: 100%; */
 }
 
-main {
+body {
   background-color: var(--background-color);
+}
+/* ========== CUSTOM SCROLLBAR ========== */
+::-webkit-scrollbar {
+  width: 1rem;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--scroll-bar);
+  border-radius: 20px;
+  margin-block: 0.5em;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--accent-clr-1);
+  border: 2px solid blue;
+  border-radius: 20px;
+}
+
+@supports (scrollbar-color: red blue) {
+  * {
+    scrollbar-color: var(--accent-clr-1) var(--scroll-bar);
+    scrollbar-width: auto;
+  }
 }
 /* ========== TYPOGRAPHY ========== */
 h1,
 h2,
 p,
 a,
-li {
+li,
+hr,
+label,
+button,
+h3 {
   color: var(--f-clr);
 }
 
@@ -69,6 +100,10 @@ h2 {
   text-transform: uppercase;
 }
 
+h3 {
+  font-size: var(--fs-3);
+}
+
 p {
   line-height: var(--f-lh);
 }
@@ -77,13 +112,39 @@ a {
   text-decoration: none;
 }
 
+i,
 li,
-p {
+p,
+input,
+textarea {
   font-size: var(--fs-p);
 }
+
 ul {
   list-style-type: none;
 }
+
+input,
+textarea {
+  padding: 0.3em 0.5em;
+  border: none;
+}
+
+input:focus,
+textarea:focus {
+  outline: 3px solid var(--accent-clr-2);
+  outline-offset: 1px;
+}
+
+label {
+  /* font-weight: var(--fw-m); */
+  font-size: var(--fs-3);
+}
+
+button:hover {
+  cursor: pointer;
+}
+
 /* ========== REUSABLE COMPONENTS ========== */
 .outline {
   outline: 1px solid lime;
@@ -94,6 +155,32 @@ ul {
 .container {
   width: min(80%, 1200px);
   margin: 0 auto;
+}
+
+header {
+  background-color: var(--blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 8rem;
+  margin-bottom: 2.5rem;
+}
+
+.button,
+button {
+  display: inline-block;
+  border: none;
+  padding: 0.4em 0.9em;
+  font-size: var(--fs-p);
+  border-radius: 15px;
+  text-transform: uppercase;
+  font-weight: var(--fw-b);
+  font-family: var(--ff);
+}
+
+.text-center {
+  text-align: center;
+  margin-top: 1em;
 }
 
 /* ========== NAVIGATION ========== */
@@ -124,7 +211,7 @@ ul {
 
 .logo__text {
   display: inline;
-  font-size: var(--fs-2);
+  font-size: 2.8rem;
 }
 
 .logo__img {
@@ -182,14 +269,6 @@ ul {
   margin-right: 0.2em;
 }
 
-.nav__link--yt:hover {
-  color: red;
-}
-
-.nav__link--discord:hover {
-  color: #5865f2;
-}
-
 /* ========== HERO ========== */
 .hero {
   padding: 2em 0 6em 0;
@@ -215,17 +294,20 @@ ul {
 }
 
 .hero_btn {
-  display: inline-block;
-  border: none;
   background-color: var(--accent-clr-1);
-  padding: 0.4em 0.9em;
-  font-size: var(--fs-p);
-  border-radius: 15px;
-  text-transform: uppercase;
-  font-weight: var(--fw-b);
 }
 
 /* ==========TOP VIDEOS========= */
+.videos {
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+.videos_card {
+  flex: 1 1 40rem;
+  margin: auto;
+}
 .videoshead {
   background-color: var(--blue);
   display: flex;
@@ -236,16 +318,211 @@ ul {
 }
 .videoshead > h1 {
   margin: auto;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
 }
 
 video {
-  width: 90%;
+  height: 45rem;
   border-radius: 15px;
+  margin: 1em auto 1em auto;
+  display: block;
 }
+
 .videos p {
   font-weight: var(--fw-b);
 }
+
+.videos_card {
+  margin-bottom: 2em;
+}
+
+.videos_card > h2 {
+  text-align: center;
+}
+
+.yt-shorts {
+  width: 20px;
+}
+.likeview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lv {
+  color: white;
+  display: inline-block;
+}
+
+.likeview_container {
+  width: min(60%, 23rem);
+  display: flex;
+  justify-content: space-between;
+}
+
+.lv:hover {
+  /* background: var(--blue);
+  padding: 0.3em 1em;
+  border-radius: 10px; */
+}
+
+.lv p {
+  display: inline;
+  letter-spacing: 1px;
+}
+
+/* ========== TEAM UP ========= */
+.team_up {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.team_up_card {
+  flex: 1 1 20rem;
+  border-radius: 15px;
+  text-align: center;
+  padding: 1em;
+  background-color: var(--light-blue);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.team_up_card > p {
+  text-align: justify;
+  margin: 1em;
+}
+
+#loose_button {
+  width: 80%;
+}
+
+.collab_button {
+  background-color: var(--accent-clr-2);
+  width: 49%;
+}
+
+.ideas {
+  flex-basis: 40rem;
+}
+
+.form_email {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.form_email > * {
+  vertical-align: middle;
+}
+
+.form_email + .form_email {
+  margin-top: 1em;
+}
+
+label {
+  display: inline-block;
+  text-align: right;
+  width: 100px;
+}
+
+input {
+  width: 50%;
+}
+
+textarea {
+  width: 50%;
+  height: 59px;
+}
+
+.ideas button {
+  margin-top: 1em;
+}
+/* ========== SPONSORSHIPS =========== */
+.sponsor > p {
+  text-align: justify;
+  margin-block: 1em;
+  text-indent: 4rem;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  background-color: var(--blue);
+  padding: 1em 0;
+  margin-top: 2em;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer_part {
+  flex: 1 1 250px;
+  justify-content: center;
+}
+
+.footer_sb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer_sb .logo {
+  display: inline-flex;
+}
+
+.link {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: var(--accent-clr-1);
+  border: 2px solid white;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link:hover {
+  opacity: 0.8;
+}
+
+.footer_medias {
+  width: min(50%, 40rem);
+  display: flex;
+  justify-content: space-between;
+  margin: 1em 0;
+}
+
+.footer_link {
+  margin-top: 1em;
+}
+
+.footer_link_links {
+  font-weight: 100;
+}
+
+.footer_sponsor {
+  margin-bottom: 1em;
+}
+
+.developed {
+  margin-bottom: 1em;
+}
+
+#copyright {
+  background-color: #23244a;
+  min-height: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (min-width: 800px) {
   .nav-toggle {
     display: none;

@@ -33,18 +33,18 @@
         <nav class="nav">
           <!--later add .nav--visible-->
           <ul class="nav__list nav__list--primary">
-            <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+            <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
             <li class="nav__item"><a href="./sponsor.html" class="nav__link">Sponsor</a></li>
-            <li class="nav__item"><a href="./sponsor.html" class="nav__link">About me</a></li>
+            <li class="nav__item"><a href="./aboutme.html" class="nav__link">About me</a></li>
           </ul>
         </nav>
 
         <ul class="nav__list nav__list--secondary">
           <li class="nav__item">
-            <a href="https://www.youtube.com/channel/UCnYGtcI8kosvwPhv0kmSarA" class="nav__link--yt"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.youtube.com/channel/UCnYGtcI8kosvwPhv0kmSarA" class="nav__link--yt" target="_blank"><i class="fa-brands fa-youtube"></i></a>
           </li>
           <li class="nav__item">
-            <a href="https://discord.gg/z2FdYxdk" class="nav__link--discord"><i class="fa-brands fa-discord"></i></a>
+            <a href="https://discord.com/invite/2jtXTASs" class="nav__link--discord" target="_blank"><i class="fa-brands fa-discord"></i></a>
           </li>
         </ul>
       </div>
@@ -56,44 +56,204 @@
             <h1 class="hero_title">Saiyan Blue</h1>
             <img src="./images/ssjblue.svg" class="ssjmob" alt="" />
             <p>A YouTube Channel that uploads and edits the best fight scenes and funny moments in the Dragonball anime. His edits were loved by fans that now he is the biggest Goku shorts YouTuber with over 270k subscribers.</p>
-            <a href="https://www.youtube.com/channel/UCnYGtcI8kosvwPhv0kmSarA" class="hero_btn" target="_blank">Visit Channel <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <a href="https://www.youtube.com/channel/UCnYGtcI8kosvwPhv0kmSarA" class="button hero_btn" target="_blank">Visit Channel <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
           </div>
           <img src="./images/ssjblue.svg" class="ssjdesk" alt="" />
         </div>
       </section>
-      <section class="topvideos">
+
+      <section class="topvideos" id="topvideos">
         <header class="videoshead">
           <h1>Top Videos</h1>
         </header>
-        <div class="container videos outline-r">
-          <div>
-            <h2><a href="https://youtu.be/s_8zAXxwVDM">The Limit-Breaking Power</a></h2>
+
+        <div class="container videos">
+          <div class="videos_card">
+            <h2>
+              <a href="https://www.youtube.com/shorts/s_8zAXxwVDM" target="_blank"> <img src="./images/youtube-shorts-icon.jpg" alt="open in yt shorts" class="yt-shorts" /> Limit-Breaking Power</a>
+            </h2>
+            <hr />
             <video controls muted loop>
               <source src="./videos/gokulimit.mp4" type="video/mp4" />
               Sorry, your browser doesn't support HTML5 videos.
             </video>
-            <div>
-              <!-- likes and views -->
+            <div class="likeview">
+              <div class="likeview_container">
+                <a class="likes lv" href="https://www.youtube.com/shorts/s_8zAXxwVDM" target="_blank">
+                  <i class="fa-solid fa-thumbs-up"></i>
+                  <p>211K</p>
+                </a>
+                <a class="views lv" href="https://www.youtube.com/shorts/s_8zAXxwVDM" target="_blank">
+                  <i class="fas fa-eye"></i>
+                  <p>2M</p>
+                </a>
+              </div>
             </div>
           </div>
 
-          <div>
-            <h2><a href="https://youtu.be/0sCpZyG7Dm8">The Limit-Breaking Power</a></h2>
+          <div class="videos_card">
+            <h2>
+              <a href="https://www.youtube.com/shorts/0sCpZyG7Dm8" target="_blank"> <img src="./images/youtube-shorts-icon.jpg" alt="open in yt shorts" class="yt-shorts" /> Goku Vs Buu</a>
+            </h2>
+            <hr />
             <video controls muted loop>
               <source src="./videos/gokuvspink.mp4" type="video/mp4" />
               Sorry, your browser doesn't support HTML5 videos.
             </video>
+            <div class="likeview">
+              <div class="likeview_container">
+                <a class="likes lv" href="https://www.youtube.com/shorts/0sCpZyG7Dm8" target="_blank">
+                  <i class="fa-solid fa-thumbs-up"></i>
+                  <p>418K</p>
+                </a>
+                <a class="views lv" href="https://www.youtube.com/shorts/0sCpZyG7Dm8" target="_blank">
+                  <i class="fas fa-eye"></i>
+                  <p>8M</p>
+                </a>
+              </div>
+            </div>
           </div>
 
-          <div>
-            <h2><a href="https://youtu.be/zdRCWHxbZ10">The Limit-Breaking Power</a></h2>
+          <div class="videos_card">
+            <h2>
+              <a href="https://www.youtube.com/shorts/0sCpZyG7Dm8" target="_blank"> <img src="./images/youtube-shorts-icon.jpg" alt="open in yt shorts" class="yt-shorts" /> Breaking the Z-sword</a>
+            </h2>
+            <hr />
             <video controls muted loop>
               <source src="./videos/sword.mp4" type="video/mp4" />
               Sorry, your browser doesn't support HTML5 videos.
             </video>
+            <div class="likeview">
+              <div class="likeview_container">
+                <a class="likes lv" href="https://www.youtube.com/shorts/0sCpZyG7Dm8" target="_blank">
+                  <i class="fa-solid fa-thumbs-up"></i>
+                  <p>451K</p>
+                </a>
+                <a class="views lv" href="https://www.youtube.com/shorts/0sCpZyG7Dm8" target="_blank">
+                  <i class="fas fa-eye"></i>
+                  <p>5M</p>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="videos_card">
+            <h2>
+              <a href="https://youtu.be/n42AgdYpnjI" target="_blank"> <img src="./images/youtube-shorts-icon.jpg" alt="open in yt shorts" class="yt-shorts" /> Vegeta Saves Goku</a>
+            </h2>
+            <hr />
+            <video controls muted loop>
+              <source src="./videos/vegetasavesgoku.mp4" type="video/mp4" />
+              Sorry, your browser doesn't support HTML5 videos.
+            </video>
+            <div class="likeview">
+              <div class="likeview_container">
+                <a class="likes lv" href="https://youtu.be/n42AgdYpnjI" target="_blank">
+                  <i class="fa-solid fa-thumbs-up"></i>
+                  <p>224K</p>
+                </a>
+                <a class="views lv" href="https://youtu.be/n42AgdYpnjI" target="_blank">
+                  <i class="fas fa-eye"></i>
+                  <p>2M</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="teamup">
+        <header>
+          <h1>Team Up</h1>
+        </header>
+
+        <div class="team_up container">
+          <div class="collab team_up_card">
+            <h2>Collaboration</h2>
+            <hr />
+            <p>The Saiyan Blue channel is open to collaborations. So if you are interested in working together don’t hesitate to contact me through my discord server, or email.</p>
+            <div>
+              <a href="https://discord.com/invite/2jtXTASs" class="button collab_button" id="loose_button" target="_blank"><i class="fab fa-discord"></i> Join Our Discord</a>
+            </div>
+          </div>
+
+          <div class="sponsor team_up_card">
+            <h2>Sponsorships</h2>
+            <hr />
+            <p>
+              The contents in the Saiyan Blue channel have been loved by hundreds of thousands of people around the world. Until now, the channel has collected more than 270K subs and 180 MILLION views! So promotions like apps or websites
+              will be highly viewed.
+            </p>
+            <div>
+              <a href="sponsor.html" class="button collab_button"><i class="fas fa-external-link-alt"></i> Learn More</a>
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=universalsaiyanofficial8569@gmail.com" target="_blank" class="button collab_button"><i class="fa-solid fa-envelope"></i> Email Us</a>
+            </div>
+          </div>
+
+          <div class="ideas team_up_card">
+            <h2>Ideas</h2>
+            <hr />
+            <p>In a hurry? You can drop a quick idea in the form bellow :)</p>
+            <!-- FORM SPREE -->
+            <form action="https://formspree.io/f/mjvzvjjz" method="POST">
+              <div class="form_email">
+                <label for="name">Name:</label>
+                <input type="text" name="name" placeholder="Saiyan Blue" required />
+              </div>
+              <div class="form_email">
+                <label for="email">Email:</label>
+                <input type="email" name="email" placeholder="saiyanblue@gmail.com" required />
+              </div>
+              <div class="form_email">
+                <label for="message">Message:</label>
+                <!-- <input type="email" name="message" required /> -->
+                <textarea name="message" placeholder="Use better music pls, love your videos btw :)" required></textarea>
+              </div>
+
+              <!-- your other form fields go here -->
+              <button type="submit" class="collab_button" id="loose_button"><i class="fa fa-paper-plane" aria-hidden="true"></i> Send Message</button>
+            </form>
           </div>
         </div>
       </section>
     </main>
+    <footer>
+      <div class="footer container">
+        <div class="footer_sb footer_part">
+          <a href="index.html" class="logo">
+            <img src="./images/pfp round.png" class="logo__img" alt="saiyan blue" />
+            <h1 class="logo__text">SB</h1>
+          </a>
+          <div class="footer_medias">
+            <a href="https://www.youtube.com/channel/UCnYGtcI8kosvwPhv0kmSarA" class="link nav__link--yt" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://discord.com/invite/2jtXTASs" class="link nav__link--discord" target="_blank"><i class="fa-brands fa-discord"></i></a>
+            <a href="https://www.buymeacoffee.com/saiyanblue" class="link nav__link--coffee" target="_blank"><i class="fa-solid fa-mug-saucer"></i></a>
+          </div>
+        </div>
+        <div class="footer_part">
+          <div class="footer_link text-center">
+            <h3>About</h3>
+            <h3 class="footer_link_links"><a href="index.html#topvideos">Top Videos</a></h3>
+            <h3 class="footer_link_links"><a href="aboutme.html">About Me</a></h3>
+          </div>
+          <div class="footer_link text-center">
+            <h3>Support</h3>
+            <h3 class="footer_link_links"><a href="index.html#teamup">Team Up</a></h3>
+            <h3 class="footer_link_links footer_sponsor"><a href="sponsor.html">Sponsor</a></h3>
+          </div>
+        </div>
+        <div class="footer_part">
+          <p class="text-center">
+            Find an issue with this page? Fix it on <a href="https://github.com/1232678/SAIYAN-BLUE" style="text-decoration: underline" target="_blank">Github<i class="fas fa-external-link-alt"></i></a>
+          </p>
+          <p class="text-center developed">
+            Website Developed By <a href="https://twitter.com/Ivana679411343" style="text-decoration: underline" target="_blank">@Ivana679411343<i class="fa-brands fa-twitter"></i></a>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <div id="copyright">
+      <p class="text-center">Copyright &#x00A9; <span class="copyright"></span> Saiyan Blue All rights reserved</p>
+    </div>
   </body>
 </html>
