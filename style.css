@@ -7,7 +7,6 @@
   --fw-b: 900;
 
   --fs-1: clamp(5rem, 5vw, 8rem);
-  /* --fs-2: 2.8rem; */
   --fs-2: clamp(2.1rem, 5vw, 3.5rem);
   --fs-3: clamp(1.6rem, 5vw, 1.8rem);
   --fs-p: 1.6rem;
@@ -105,7 +104,6 @@ h3 {
 p {
   line-height: var(--f-lh);
 }
-/* use clamp */
 a {
   text-decoration: none;
 }
@@ -135,7 +133,6 @@ textarea:focus {
 }
 
 label {
-  /* font-weight: var(--fw-m); */
   font-size: var(--fs-3);
 }
 
@@ -182,9 +179,6 @@ button {
 .big-nav {
   padding: 1.5em 0;
   background-color: var(--background-color);
-  /* text-align: center; */
-  /* position: fixed;
-  width: 100vw; */
 }
 .big-nav__container {
   width: min(80%, 1100px);
@@ -295,7 +289,6 @@ button {
 /* ==========TOP VIDEOS========= */
 .videos {
   display: flex;
-  /* flex-direction: column; */
   flex-wrap: wrap;
   gap: 4rem;
 }
@@ -435,11 +428,12 @@ textarea {
   margin-block: 1em;
 }
 
-/* About ME */
+/* =========== About Me ==========*/
 .aboutme > p {
   text-align: justify;
   margin-block: 1em;
 }
+
 /* ========== FOOTER ========== */
 footer {
   background-color: var(--blue);
@@ -534,6 +528,7 @@ footer {
   align-items: center;
 }
 
+/* ============ MEDIA QUERIES FOR DESKTOP ========== */
 @media (min-width: 800px) {
   .nav-toggle {
     display: none;
